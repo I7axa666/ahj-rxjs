@@ -24,7 +24,7 @@ function getMessageInfo(req) {
 
 function getRequest() {
   return new Observable(() => {
-    ajax.getJSON('http://localhost:3000/messages/unread/')
+    ajax.getJSON('https://ahj-rxjs-nxsn.onrender.com/messages/unread/')
       .pipe(
         catchError(() => of({ messages: [] })),
       )
